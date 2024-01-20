@@ -1,3 +1,52 @@
+# Tips para pruebas técnicas y que tener en cuenta con React
+
+### Configurar react desde cero usando vite con vanillaJS
+
+1. Instalar desde cero lo necesario:
+
+```sh
+npm create vite@latest #Elegir vanillaJS
+npm install @vitejs/plugin-react -E #Instalar plugin de react
+npm install react react-dom -E
+```
+
+2. Crear `vite.config.js`:
+
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+})
+```
+
+3. Crear (o cambiar nombre) `main.jsx`:
+
+```sh
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+# import { App } from './src/App.jsx'
+
+const root = createRoot(document.getElementById('app'))
+
+root.render(<h1>Hello World!</h1>)
+```
+
+4. Instalar el linter:
+
+```sh
+npm install standard -D
+```
+
+Agregar al `package.json`:
+
+```json
+"eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+```
+
 ### Convertir de promise to async awit con ejemplo de: useEffect() para usar async await desde normal con fetch:
 
 Antes:
