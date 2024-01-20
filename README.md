@@ -21,7 +21,7 @@ export default defineConfig({
 })
 ```
 
-3. Crear (o cambiar nombre) `main.jsx`:
+3. Crear (o cambiar nombre `main.js`) a `main.jsx`:
 
 ```sh
 import React from 'react'
@@ -75,6 +75,8 @@ useEffect(() => { // captura de errores con el try... catch
         const json = await res.json()
         console.log(json.data.param...)
     }
+
+    getRandom()
 }, [])
 ```
 
