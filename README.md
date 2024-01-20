@@ -17,7 +17,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react()]
 })
 ```
 
@@ -127,5 +127,54 @@ section {
 section img {
     max-width: 320px;
     height: auto;
+}
+```
+
+### Hacer end to end test rápido usando playwright:
+
+Instalar playwright y ejecutarlo:
+
+```sh
+npm init playwright
+```
+
+2. Renombrar `playwright.config.js` por `playwright.config.cjs`
+
+3. Cambiar en el ejemplo `example.spec.js` la línea:
+
+```js
+// const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test'
+```
+
+4. Ejecutar los tests que están en la carpeta `tests`:
+
+```sh
+npx playwright test
+# para ver un reporte
+npx playwright show-report
+```
+
+Ver referencias: https://playwright.dev/docs/locators
+
+### Instalar react + typescript
+
+```sh
+npm create vite@latest # elegir react + typescript + swc
+cd dir-de-instalación
+npm install
+# configurar linter e iniciar linter
+npx eslint --init  # react, browser, standard-with-typescript, javascript
+```
+
+- Para que funcione el linter, agregar al `.eslintrc.cjs`:
+-
+
+```json
+paserOptions : {..., project: './tsconfig.json'}
+
+# definir aquí con off las reglas que deseamos desactivar
+rules: {
+    ''
 }
 ```
