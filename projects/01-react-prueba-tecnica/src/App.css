@@ -1,0 +1,19 @@
+section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section img {
+  max-width: 320px;
+  height: auto;
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+}
