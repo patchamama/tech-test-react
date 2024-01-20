@@ -47,7 +47,7 @@ Agregar al `package.json`:
   }
 ```
 
-### Convertir de promise to async awit con ejemplo de: useEffect() para usar async await desde normal con fetch:
+### Convertir `promise` to `async await` con ejemplo de uso en `useEffect()` usando un `fetch()`:
 
 Antes:
 
@@ -66,7 +66,7 @@ useEffect(() => {
 }, [])
 ```
 
-Después (el useEffect es siempre una función síncrona por lo que hay que crear una función interna async):
+Después (el `useEffect` es siempre una función síncrona por lo que solo se puede usar como función interna adicional en una función `async...`):
 
 ```js
 useEffect(() => { // captura de errores con el try... catch
