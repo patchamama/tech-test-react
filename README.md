@@ -192,9 +192,27 @@ localStore.setItem("favorites", JSON.Stringify(favorite))
 
 Lo contrario del `JSON.Stringify(json) => string` es el `JSON.parse(string) => json`
 
+### Capturar valores de campos de un form (sin useRef) en un componente
+
+```jsx
+const handleSubmit = (event) => {
+  event.preventDefault()
+  const fields = new windows.FormData(event.target) // {'query': 'valor tecleado'}
+  const query = fields.get('query')
+  console.log(query)
+}
+
+return (
+  <form onSubmit={handleSubmit}>
+    <input name='query' />
+    <button type='submit'>Buscar</button>
+  </form>
+)
+```
+
 ## Referencias
 
-- Ejemplo de css genérico que se puede usar en cualquier aplicación cómo punto de partida.
+- Ejemplo de css genérico que se puede usar en cualquier aplicación cómo punto de partida (framework less css, también como bolt.css).
   URL: https://cdn.jsdelivr.net/npm/water.css@2/out/water.css
   Web: https://watercss.kognise.dev/#
 - Preguntas entrevistas técnicas (midu): https://github.com/midudev/preguntas-entrevista-react
