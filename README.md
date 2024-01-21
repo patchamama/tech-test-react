@@ -97,10 +97,11 @@ o Css:
 main {
     display: flex;
     flex-direction: column;
-    place-items: center;
+    justify-content: center;
+    align-items: center;
     max-width: 800px;
     margin; 0 auto;
-    font-family: system-ui
+    width: 100%
 }
 ```
 
@@ -119,7 +120,7 @@ En fila u horizontal (o para desktop):
 ```css
 section {
     display: flex:
-    justify-content: space-between;
+    justify-content: space-between;  // center
     align-items: center;
     gap: 2rem;
 }
@@ -127,6 +128,27 @@ section {
 section img {
     max-width: 320px;
     height: auto;
+}
+```
+
+Con `grid` quizás mejor:
+
+```css
+// importante que el contenedor que contiene las imágenes, tarjetas, card... esté ocupando el 100% de ancho
+main {
+  width: 100%;
+}
+
+// Configuración de la grid de elemento con class=movies (en react className={movies})
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  gap: 32px;
 }
 ```
 
@@ -209,6 +231,10 @@ return (
   </form>
 )
 ```
+
+### Notas
+
+- Para refactorizar, casi siempre se puede separar en un `custom hook` la lógica de un componente sí usa un `useEffect`. De otra forma, sería un helper...
 
 ## Referencias
 
