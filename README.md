@@ -191,3 +191,8 @@ localStore.setItem("favorites", JSON.Stringify(favorite))
 ```
 
 Lo contrario del `JSON.Stringify(json) => string` es el `JSON.parse(string) => json`
+
+### Ejemplo de css genérico que se puede usar en cualquier aplicación cómo punto de partida
+
+URL: https://cdn.jsdelivr.net/npm/water.css@2/out/water.css
+Web: https://watercss.kognise.dev/#
