@@ -178,3 +178,16 @@ rules: {
     ''
 }
 ```
+
+### LocalStore
+
+```js
+const [favorites, setFavorites] = useState({})
+
+# Leer
+localStore.getItem("favorites")
+# Almacenar
+localStore.setItem("favorites", JSON.Stringify(favorite))
+```
+
+Lo contrario del `JSON.Stringify(json) => string` es el `JSON.parse(string) => json`
