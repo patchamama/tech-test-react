@@ -222,6 +222,8 @@ const handleSubmit = (event) => {
   const fields = new windows.FormData(event.target) // {'query': 'valor tecleado'}
   const query = fields.get('query')
   console.log(query)
+  # Seguro mejor:
+  # const query = event.target.query.value
 }
 
 return (
@@ -231,6 +233,10 @@ return (
   </form>
 )
 ```
+
+### Cómo mover el focus a un elemento jsx al cargar: `<input autoFocus ... />``
+
+### Usar un creador de ID (no uuuid): `[...arr, {id: +new Date, ...}]`. La opci´n de `+ new Date`
 
 ### Notas
 
