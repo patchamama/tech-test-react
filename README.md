@@ -85,7 +85,14 @@ useEffect(() => { // captura de errores con el try... catch
 En vertical o de columna (o para mobile):
 
 ```js
-    <main style={{ display: flex; flex-direction: column; place-items: center; max-width: 800px; margin; 0 auto; font-family: system-ui}}>
+    <main style={{
+        display: 'flex',
+        flexDirection: 'column',
+        placeItems: 'center',
+        maxWidth: '800px',
+        margin: '0 auto',
+        fontFamily: 'system-ui'
+    }}>
         <Component1>
         <h1>Ejemplo.. </h1>
     </main>
@@ -99,6 +106,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     max-width: 800px;
     margin; 0 auto;
     width: 100%
